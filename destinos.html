@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo de Destinos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     
+    <header>
+        <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="index.html">RINCONES ESCONDIDOSl</a>
+                <div class="navbar-collapse justify-content-end" id="navbarNavMenu">
+                    <ul class="navbar-nav flex-row">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="destinos.html">Destinos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="experiencias.html">Experiencias</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="planificador.html">Planificador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="text-center mb-5" data-aos="fade-up">
+            <h1 class="display-4 fw-bold text-dark">Destinos Turísticos</h1>
+            <p class="lead text-muted">Explora los rincones más hermosos, desde majestuosas sierras hasta tranquilos pueblos mágicos.</p>
+        </section>
+
+        <section class="row g-4">
+            
+            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold text-success mb-3">Ruta de Senderismo - Sierra Alta</h3>
+                        <p class="card-text text-muted">Un paisaje imponente cubierto de bosques de niebla, ideal para caminatas al aire libre, miradores naturales y avistamiento de aves.</p>
+                        <span class="badge bg-success">Región Norte</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold text-success mb-3">Pueblo Mágico Colonial</h3>
+                        <p class="card-text text-muted">Disfruta de calles empedradas, arquitectura histórica, mercados de artesanías tradicionales y una oferta gastronómica única.</p>
+                        <span class="badge bg-primary">Centro Histórico</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold text-success mb-3">Cascadas y Pozas Esmeralda</h3>
+                        <p class="card-text text-muted">Un santuario natural de aguas cristalinas rodeado de vegetación tropical, perfecto para la relajación y la fotografía de paisajes.</p>
+                        <span class="badge bg-info text-dark">Ecoturismo</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold text-success mb-3">Valle de Monolitos y Leyendas</h3>
+                        <p class="card-text text-muted">Formaciones rocosas gigantescas ideales para la aventura ligera, campamentos nocturnos y la contemplación del firmamento.</p>
+                        <span class="badge bg-warning text-dark">Aventura</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="500">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold text-success mb-3">Reserva de la Biósfera</h3>
+                        <p class="card-text text-muted">Área protegida que ofrece senderos interpretativos guiados para entender la conservación de la flora y la fauna endémica.</p>
+                        <span class="badge bg-success">Conservación</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold text-success mb-3">Mirador del Cañón Profundo</h3>
+                        <p class="card-text text-muted">Vistas panorámicas impresionantes desde las alturas del cañón, un sitio obligatorio para los amantes de los horizontes abiertos.</p>
+                        <span class="badge bg-danger">Mirador</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <small>© 2026 RINCONES ESCONDIDOS - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
