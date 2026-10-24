@@ -30,7 +30,6 @@ body {
     font-weight: 600;
     margin-left: 18px;
     transition: all 0.25s ease;
-    position: general;
 }
 
 .navbar-nav .nav-link:hover, 
@@ -68,6 +67,9 @@ body {
     background-color: #ffffff;
     box-shadow: 0 6px 15px rgba(43, 38, 33, 0.04);
     transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
@@ -87,6 +89,9 @@ body {
 
 .card-body {
     padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .card-title, .card h3 {
@@ -99,6 +104,17 @@ body {
 .card-text {
     color: #6b5c53;
     font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Regla global: Fuerza a cualquier botón o enlace dentro de la tarjeta a ocupar el 100% de ancho y mandarlo al fondo */
+.card-body .btn, 
+.card-body a.badge,
+.card-body a.btn-terracota {
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .btn-terracota {

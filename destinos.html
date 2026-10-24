@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Destinos</title>
+    <title>Catálogo de Destinos - Rutas y Destinos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Ruta correcta a tu CSS -->
     <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     
+    <!-- ENCABEZADO Y NAVEGACIÓN UNIFICADA -->
     <header>
-        <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="index.html">RINCONES ESCONDIDOS</a>
+        <nav class="navbar navbar-expand fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">🧭 Rutas y Destinos</a>
                 <div class="navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav flex-row">
-                        <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="destinos.html">Destinos</a>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="destinos.html">Destinos</a>
                         </li>
-                        <li class="nav-item me-3">
+                        <li class="nav-item">
                             <a class="nav-link" href="experiencias.html">Experiencias</a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="planificador.html">Planificador</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Planificador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="faq.html">FAQ</a>
@@ -37,70 +39,78 @@
         </nav>
     </header>
 
-    <main class="container my-5">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-5" style="padding-top: 80px;">
         <section class="text-center mb-5" data-aos="fade-up">
-            <h1 class="display-4 fw-bold text-dark">Destinos Turísticos</h1>
+            <h1 class="display-4 fw-bold mb-2" style="color: #2b2621;">Destinos Turísticos</h1>
             <p class="lead text-muted">Explora los rincones más hermosos, desde majestuosas sierras hasta tranquilos pueblos mágicos.</p>
         </section>
 
+        <!-- SECCIÓN DE TARJETAS CON TUS 6 DESTINOS -->
         <section class="row g-4">
             
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100">
+                    <img src="img/Senderismo.webp" class="card-img-top" alt="Ruta de senderismo Barrancas del Cobre">
                     <div class="card-body p-4">
-                        <h3 class="h5 fw-bold text-success mb-3">Ruta de Senderismo - Sierra Alta</h3>
-                        <p class="card-text text-muted">Un paisaje imponente cubierto de bosques de niebla, ideal para caminatas al aire libre, miradores naturales y avistamiento de aves.</p>
-                        <span class="badge bg-success">Región Norte</span>
+                        <h3 class="h5 fw-bold mb-3">Barrancas del Cobre - Chihuahua</h3>
+                        <p class="card-text text-muted mb-4">Las Barrancas del Cobre son el sistema de cañones más extenso y profundo que el Gran Cañón de EE. UU., ideal para el turismo de aventura, caminatas memorables y recorridos panorámicos en el tren Chepe.</p>
+                        <a href="https://www.youtube.com/watch?v=ln3lN9W4T5M" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>
             </article>
 
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100">
+                    <img src="img/Tepoztlan.webp" class="card-img-top" alt="Pueblo mágico Tepoztlán">
                     <div class="card-body p-4">
-                        <h3 class="h5 fw-bold text-success mb-3">Pueblo Mágico Colonial</h3>
-                        <p class="card-text text-muted">Disfruta de calles empedradas, arquitectura histórica, mercados de artesanías tradicionales y una oferta gastronómica única.</p>
-                        <span class="badge bg-primary">Centro Histórico</span>
+                        <h3 class="h5 fw-bold mb-3">Tepoztlán - Morelos</h3>
+                        <p class="card-text text-muted mb-4">Disfruta de las calles empedradas de Tepoztlán, el ambiente místico que rodea al Tepozteco, su oferta de artesanías tradicionales y un mercado lleno de misticismo y sabor.</p>
+                        <a href="https://www.youtube.com/watch?v=LQfmoEJ9Eg0" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>
             </article>
 
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100">
+                    <img src="img/Prismas.webp" class="card-img-top" alt="Prismas Basálticos Hidalgo">
                     <div class="card-body p-4">
-                        <h3 class="h5 fw-bold text-success mb-3">Cascadas y Pozas Esmeralda</h3>
-                        <p class="card-text text-muted">Un santuario natural de aguas cristalinas rodeado de vegetación tropical, perfecto para la relajación y la fotografía de paisajes.</p>
-                        <span class="badge bg-info text-dark">Ecoturismo</span>
+                        <h3 class="h5 fw-bold mb-3">Prismas Basálticos - Hidalgo</h3>
+                        <p class="card-text text-muted mb-4">Impresionantes columnas geométricas de roca basáltica bañadas por cascadas cristalinas. Un fenómeno natural único en México perfecto para la fotografía y el descanso.</p>
+                        <a href="https://www.youtube.com/watch?v=Bo23omeG6H8" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>
             </article>
 
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100">
+                    <img src="img/Callejon.webp" class="card-img-top" alt="Callejón del Beso Guanajuato">
                     <div class="card-body p-4">
-                        <h3 class="h5 fw-bold text-success mb-3">Valle de Monolitos y Leyendas</h3>
-                        <p class="card-text text-muted">Formaciones rocosas gigantescas ideales para la aventura ligera, campamentos nocturnos y la contemplación del firmamento.</p>
-                        <span class="badge bg-warning text-dark">Aventura</span>
+                        <h3 class="h5 fw-bold mb-3">Callejón del Beso - Guanajuato</h3>
+                        <p class="card-text text-muted mb-4">El rincón más romántico y emblemático de Guanajuato. Conoce la trágica y hermosa leyenda de amor que ha cautivado a visitantes de todo el mundo durante generaciones.</p>
+                        <a href="https://www.youtube.com/watch?v=5EC3-6N1plA" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>
             </article>
 
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="500">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100">
+                    <img src="img/Reserva.webp" class="card-img-top" alt="Reserva Mariposa Monarca Michoacán">
                     <div class="card-body p-4">
-                        <h3 class="h5 fw-bold text-success mb-3">Reserva de la Biósfera</h3>
-                        <p class="card-text text-muted">Área protegida que ofrece senderos interpretativos guiados para entender la conservación de la flora y la fauna endémica.</p>
-                        <span class="badge bg-success">Conservación</span>
+                        <h3 class="h5 fw-bold mb-3">Reserva Mariposa Monarca - Michoacán</h3>
+                        <p class="card-text text-muted mb-4">Santuario natural donde millones de mariposas completan su ciclo migratorio cubriendo los bosques de oyamel en un espectáculo visual inigualable.</p>
+                        <a href="https://www.youtube.com/watch?v=EH4hlQMC6rs" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>
             </article>
 
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="600">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100">
+                    <img src="img/Cañón.webp" class="card-img-top" alt="Cañón del Sumidero Chiapas">
                     <div class="card-body p-4">
-                        <h3 class="h5 fw-bold text-success mb-3">Mirador del Cañón Profundo</h3>
-                        <p class="card-text text-muted">Vistas panorámicas impresionantes desde las alturas del cañón, un sitio obligatorio para los amantes de los horizontes abiertos.</p>
-                        <span class="badge bg-danger">Mirador</span>
+                        <h3 class="h5 fw-bold mb-3">Cañón del Sumidero - Chiapas</h3>
+                        <p class="card-text text-muted mb-4">Una majestuosa falla geológica con paredes de más de mil metros de altura. Recorre sus aguas en lancha y admira la biodiversidad de la selva chiapaneca.</p>
+                        <a href="https://www.youtube.com/watch?v=1wLYUUFP9so" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>
             </article>
@@ -108,13 +118,15 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <div class="container">
-            <small>© 2026 RINCONES ESCONDIDOS - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="container text-center">
+            <small>© 2026 Rutas y Destinos - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
         </div>
     </footer>
 
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
