@@ -1,37 +1,98 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar animaciones de desplazamiento (AOS)
     if (typeof AOS !== 'undefined') {
         AOS.init();
     }
 
-    // Lógica del formulario planificador
     const formulario = document.getElementById('formPlanificador');
     
     if (formulario) {
         const alerta = document.getElementById('mensajeAlerta');
 
         formulario.addEventListener('submit', function(event) {
-            // Intercepta el envío nativo para evitar la recarga de la página
             event.preventDefault();
 
-            // Capturar elementos de entrada principales
-            const nombre = document.getElementById('nombreUsuario').value.trim();
-            const email = document.getElementById('emailUsuario').value.trim();
-            const destino = document.getElementById('destinoSelect').value;
-            const fecha = document.getElementById('fechaViaje').value;
+            const inputNombre = document.getElementById('nombreUsuario');
+            const inputEmail = document.getElementById('emailUsuario');
+            const inputTelefono = document.getElementById('telefonoUsuario');
+            const inputFechaNacimiento = document.getElementById('fechaNacimiento');
+            const inputEdad = document.getElementById('edadUsuario');
+            const inputDestino = document.getElementById('destinoSelect');
 
-            // Validación en JavaScript
-            if (nombre === '' || email === '' || destino === '' || fecha === '') {
+            const nombre = inputNombre.value.trim();
+            const email = inputEmail.value.trim();
+            const telefono = inputTelefono.value.trim();
+            const fechaNacimiento = inputFechaNacimiento.value;
+            const edadValor = inputEdad.value.trim();
+            const destino = inputDestino.value;
+
+            let formValido = true;
+
+            if (nombre === '') {
+                inputNombre.classList.add('is-invalid');
+                formValido = false;
+            } else {
+                inputNombre.classList.remove('is-invalid');
+                inputNombre.classList.add('is-valid');
+            }
+
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexEmail.test(email)) {
+                inputEmail.classList.add('is-invalid');
+                formValido = false;
+            } else {
+                inputEmail.classList.remove('is-invalid');
+                inputEmail.classList.add('is-valid');
+            }
+
+            const regexTelefono = /^\d{10}$/;
+            if (!regexTelefono.test(telefono)) {
+                inputTelefono.classList.add('is-invalid');
+                formValido = false;
+            } else {
+                inputTelefono.classList.remove('is-invalid');
+                inputTelefono.classList.add('is-valid');
+            }
+
+            const fechaIngresada = new Date(fechaNacimiento);
+            const hoy = new Date();
+            if (fechaNacimiento === '' || fechaIngresada > hoy) {
+                inputFechaNacimiento.classList.add('is-invalid');
+                formValido = false;
+            } else {
+                inputFechaNacimiento.classList.remove('is-invalid');
+                inputFechaNacimiento.classList.add('is-valid');
+            }
+
+            const edad = parseInt(edadValor);
+            if (edadValor === '' || isNaN(edad) || edad < 1 || edad > 120) {
+                inputEdad.classList.add('is-invalid');
+                formValido = false;
+            } else {
+                inputEdad.classList.remove('is-invalid');
+                inputEdad.classList.add('is-valid');
+            }
+
+            if (destino === '') {
+                inputDestino.classList.add('is-invalid');
+                formValido = false;
+            } else {
+                inputDestino.classList.remove('is-invalid');
+                inputDestino.classList.add('is-valid');
+            }
+
+            if (!formValido) {
                 alerta.className = "alert alert-danger";
-                alerta.textContent = "Por favor, completa todos los campos obligatorios del planificador.";
+                alerta.textContent = "Por favor, corrige los campos marcados en rojo antes de continuar.";
                 alerta.classList.remove('d-none');
             } else {
                 alerta.className = "alert alert-success";
-                alerta.textContent = `¡Excelente, ${nombre}! Tu itinerario para '${destino}' ha sido registrado con éxito. Nos pondremos en contacto contigo.`;
+                alerta.textContent = `¡Excelente, ${nombre}! Tu itinerario ha sido registrado con éxito. Nos pondremos en contacto contigo.`;
                 alerta.classList.remove('d-none');
                 
-                // Limpiar el formulario tras el éxito
                 formulario.reset();
+                document.querySelectorAll('.form-control, .form-select').forEach(el => {
+                    el.classList.remove('is-valid', 'is-invalid');
+                });
             }
         });
     }

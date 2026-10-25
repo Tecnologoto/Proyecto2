@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planificador de Viajes</title>
+    <title>Planificador - Rutas y Destinos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="index.html">RINCONES ESCONDIDOS</a>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
+                </a>
                 <div class="navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav flex-row">
                         <li class="nav-item me-3">
@@ -26,7 +28,7 @@
                             <a class="nav-link" href="experiencias.html">Experiencias</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="contacto.html">Planificador</a>
+                            <a class="nav-link active" aria-current="page" href="planificador.html">Planificador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="faq.html">FAQ</a>
@@ -37,55 +39,72 @@
         </nav>
     </header>
 
-    <main class="container my-5">
-        <section class="text-center mb-5" data-aos="fade-up">
-            <h1 class="display-4 fw-bold text-dark">Planificador de Viajes</h1>
-            <p class="lead text-muted">Personaliza tu próxima aventura o reserva tu experiencia turística con nosotros.</p>
+    <main class="container my-5" style="padding-top: 80px; max-width: 750px;">
+        <section class="text-center mb-4" data-aos="fade-up">
+            <h1 class="display-5 fw-bold mb-2" style="color: #2b2621;">Planificador de Viajes</h1>
+            <p class="text-muted">Personaliza tu próxima aventura o reserva tu experiencia turística con nosotros.</p>
         </section>
 
         <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-10 col-md-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="card shadow-sm border-0 p-4 bg-white">
-                    <div class="card-body">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-sm border-0 p-4 p-md-5 bg-white">
+                    <div class="card-body p-0">
                         
-                        <div id="mensajeAlerta" class="alert d-none" role="alert"></div>
+                        <div id="mensajeAlerta" class="alert d-none mb-4" role="alert"></div>
 
                         <form id="formPlanificador" novalidate>
                             
                             <div class="mb-3">
-                                <label for="nombreUsuario" class="form-label fw-bold text-secondary">Nombre Completo</label>
+                                <label for="nombreUsuario" class="form-label fw-bold small text-secondary">Nombre Completo</label>
                                 <input type="text" class="form-control" id="nombreUsuario" placeholder="Ej. Ana Pérez" required>
+                                <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
                             </div>
 
                             <div class="mb-3">
-                                <label for="emailUsuario" class="form-label fw-bold text-secondary">Correo Electrónico</label>
+                                <label for="emailUsuario" class="form-label fw-bold small text-secondary">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="emailUsuario" placeholder="correo@ejemplo.com" required>
+                                <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefonoUsuario" class="form-label fw-bold small text-secondary">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefonoUsuario" placeholder="Ej. 5512345678" required>
+                                <div class="invalid-feedback">Ingresa un número de teléfono válido (10 dígitos).</div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3 mb-md-0">
-                                    <label for="destinoSelect" class="form-label fw-bold text-secondary">Destino de Interés</label>
-                                    <select class="form-select" id="destinoSelect" required>
-                                        <option value="" selected disabled>Selecciona una región...</option>
-                                        <option value="sierra">Ruta de Senderismo - Sierra</option>
-                                        <option value="pueblo">Pueblo Mágico y Cultura</option>
-                                        <option value="costa">Aventura en la Costa</option>
-                                    </select>
+                                    <label for="fechaNacimiento" class="form-label fw-bold small text-secondary">Fecha de Nacimiento</label>
+                                    <input type="date" class="form-control" id="fechaNacimiento" required>
+                                    <div class="invalid-feedback">Selecciona una fecha de nacimiento válida.</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="fechaViaje" class="form-label fw-bold text-secondary">Fecha Estimada</label>
-                                    <input type="date" class="form-control" id="fechaViaje" required>
+                                    <label for="edadUsuario" class="form-label fw-bold small text-secondary">Edad</label>
+                                    <input type="number" class="form-control" id="edadUsuario" placeholder="Ej. 22" min="1" max="120" required>
+                                    <div class="invalid-feedback">Ingresa una edad válida (entre 1 y 120 años).</div>
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <label for="detallesTextarea" class="form-label fw-bold text-secondary">Requerimientos o Comentarios Adicionales</label>
+                                <label for="destinoSelect" class="form-label fw-bold small text-secondary">Destino de Interés</label>
+                                <select class="form-select" id="destinoSelect" required>
+                                    <option value="" selected disabled>Selecciona una región o destino...</option>
+                                    <option value="barrancas">Barrancas del Cobre - Chihuahua</option>
+                                    <option value="tepoztlan">Tepoztlán - Morelos</option>
+                                    <option value="prismas">Prismas Basálticos - Hidalgo</option>
+                                    <option value="callejon">Callejón del Beso - Guanajuato</option>
+                                    <option value="mariposa">Reserva Mariposa Monarca - Michoacán</option>
+                                    <option value="canion">Cañón del Sumidero - Chiapas</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor selecciona un destino de interés.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="detallesTextarea" class="form-label fw-bold small text-secondary">Requerimientos o Comentarios Adicionales</label>
                                 <textarea class="form-control" id="detallesTextarea" rows="4" placeholder="Indícanos si requieres guía certificado, transporte o necesidades especiales..."></textarea>
                             </div>
 
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-success btn-lg fw-bold">Enviar Planificador</button>
-                            </div>
+                            <button type="submit" class="btn btn-terracota w-100 py-3 fw-bold">Enviar Planificador</button>
 
                         </form>
 
@@ -95,9 +114,9 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
+    <footer class="text-center py-4 mt-5">
         <div class="container">
-            <small>© 2026 RINCONES ESCONDIDOS - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
+            <small>© 2026 Rutas y Destinos - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
         </div>
     </footer>
 

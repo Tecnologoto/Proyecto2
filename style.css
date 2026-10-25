@@ -107,7 +107,6 @@ body {
     flex-grow: 1;
 }
 
-/* Regla global: Fuerza a cualquier botón o enlace dentro de la tarjeta a ocupar el 100% de ancho y mandarlo al fondo */
 .card-body .btn, 
 .card-body a.badge,
 .card-body a.btn-terracota {
@@ -149,9 +148,50 @@ body {
     background-color: #ffffff !important;
 }
 
+body {
+    background: linear-gradient(#f7f4ef99, #f7f4ef99), url('img/fondo.jpg');
+    /*f7f4ef66*/
+    /*f7f4ef80*/
+    /*f7f4ef99*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 footer {
     background-color: #211c18 !important;
     color: #d6cfc7 !important;
     border-top: 1px solid #362e28;
     padding: 30px 0;
+}
+
+.accordion {
+    --bs-accordion-bg: #ffffff;
+    --bs-accordion-btn-bg: #a84e26;
+    --bs-accordion-active-bg: #a84e26;
+    --bs-accordion-active-color: #ffffff;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+/* Estado normal de TODOS los botones del acordeón (cuando están cerrados) */
+.accordion-button.collapsed {
+    background-color: #a84e26 !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Estado cuando CUALQUIER botón está abierto/expandido */
+.accordion-button:not(.collapsed) {
+    background-color: #a84e26 !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Limpiar bordes o sombras generales del botón */
+.accordion-button {
+    border: none !important;
+    box-shadow: none !important;
 }

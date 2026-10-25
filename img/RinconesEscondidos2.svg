@@ -1,0 +1,44 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo sutil de textura envejecida o mapa -->
+  <defs>
+    <filter id="alojamiento" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur stdDeviation="1" />
+    </filter>
+    <linearGradient id="gradienteFondo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fcfbfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f7f4ef;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#gradienteFondo)" filter="url(#alojamiento)" opacity="0.6" />
+
+  <!-- Símbolo: Brújula / Llave Emotiva y detallada -->
+  <g transform="translate(15, 10)">
+    <!-- Círculo exterior de la brújula con pátina -->
+    <circle cx="30" cy="30" r="27" stroke="#a84e26" stroke-width="1.5" fill="#2b2621" stroke-dasharray="5 2" />
+    <circle cx="30" cy="30" r="24" stroke="#e5ddd0" stroke-width="0.5" fill="none" />
+    
+    <!-- Puntas de la brújula estilizadas -->
+    <path d="M30 4 L34 26 L30 34 L26 26 Z" fill="#a84e26" />
+    <path d="M30 56 L34 34 L30 26 L26 34 Z" fill="#a84e26" />
+    <path d="M4 30 L26 34 L34 30 L26 26 Z" fill="#a84e26" />
+    <path d="M56 30 L34 34 L26 30 L34 26 Z" fill="#a84e26" />
+    
+    <!-- Estrellas internas más finas -->
+    <path d="M30 30 L18 18 M30 30 L42 18 M30 30 L18 42 M30 30 L42 42" stroke="#a84e26" stroke-width="0.8" opacity="0.8" />
+
+    <!-- Ojal / Cuerpo de Llave central con brillo -->
+    <circle cx="30" cy="30" r="9" fill="#f7f4ef" />
+    <circle cx="30" cy="30" r="4" fill="#38d4f8" />
+    <path d="M30 30 L32 28 M30 30 L28 28" stroke="#2b2621" stroke-width="1" />
+    
+    <!-- Caña de la llave con muescas y detalle de filigrana -->
+    <path d="M28.5 38 L28.5 53 H31.5 L31.5 38 Z" fill="#a84e26" />
+    <path d="M31.5 44 H36 V48 H31.5 Z" fill="#a84e26" />
+    <path d="M31.5 49 H35 V51 H31.5 Z" fill="#a84e26" />
+    <circle cx="30" cy="45.5" r="1.2" fill="#f7f4ef" />
+  </g>
+
+  <!-- Texto del Logo: RINCONES ESCONDIDOS con tipografía y color evocador -->
+  <text x="82" y="32" font-family="&#39;Merriweather&#39;, serif" font-weight="800" font-size="22" fill="#2b2621" letter-spacing="1">RINCONES</text>
+  <text x="82" y="60" font-family="&#39;Merriweather&#39;, serif" font-weight="400" font-size="22" fill="#a84e26" letter-spacing="1.5">ESCONDIDOS</text>
+</svg>

@@ -14,7 +14,9 @@
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="index.html">RINCONES ESCONDIDOS</a>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
+                </a>
                 <div class="navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav flex-row">
                         <li class="nav-item me-3">
@@ -39,57 +41,105 @@
     </header>
 
     <main>
-        <section class="bg-dark text-white text-center py-5 mb-5 shadow" data-aos="fade-down">
-            <div class="container py-4">
-                <h1 class="display-3 fw-bold mb-3">Descubre Tu Próxima Aventura</h1>
-                <p class="lead mb-4">Explora destinos increíbles, vive experiencias auténticas guiadas por expertos y planifica tu viaje ideal en un solo lugar.</p>
+        <section class="hero-section text-center py-5" style="padding-top: 140px !important; padding-bottom: 80px !important;" data-aos="fade-up">
+            <div class="container" style="max-width: 800px;">
+                <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #a84e26; color: #fff; font-size: 0.85rem;">Turismo Auténtico y de Aventura</span>
+                <h1 class="display-4 fw-bold mb-3" style="color: #2b2621;">Explora los secretos mejor guardados de México</h1>
+                <p class="lead text-muted mb-4">Sal de las rutas convencionales y adéntrate en paisajes mágicos, pueblos con historia y experiencias naturales diseñadas para ti.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="planificador.html" class="btn btn-terracota btn-lg px-4 py-2 fw-bold">Comenzar Planificador</a>
+                    <a href="destinos.html" class="btn btn-lg px-4 py-2 fw-bold shadow-sm" style="background-color: #ffffff; border: 1px solid #dcd6cd; color: #2b2621;">Ver Destinos</a>
+                </div>
             </div>
         </section>
 
-        <div class="container mb-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="h2 fw-bold text-dark">¿Por qué elegir a Rincones Escondidos?</h2>
-                <p class="text-muted">Diseñado para ofrecerte la mejor experiencia de navegación y turismo regional.</p>
+        <section class="container my-5 py-3" data-aos="fade-up">
+            <div class="card border-0 shadow-sm overflow-hidden" style="background-color: #fcfbfa;">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6 p-5">
+                        <span class="badge px-3 py-2 mb-3" style="background-color: #2b2621; color: #fff;">Ruta Destacada del Mes</span>
+                        <h2 class="h2 fw-bold mb-3" style="color: #2b2621;">El Camino de la Monarca y Bosques de Oyamel</h2>
+                        <p class="mb-4" style="color: #6b5c53; font-size: 1rem; line-height: 1.6;">Una travesía imperdible diseñada para conectar profundamente con el ritmo de la naturaleza. Recorre senderos brumosos, descubre miradores secretos y maravíllate con el santuario natural.</p>
+                        <a href="planificador.html" class="btn btn-terracota px-4 py-2 fw-bold">Reservar Ruta del Mes</a>
+                    </div>
+                    <div class="col-lg-6 text-white text-center p-5 d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background: linear-gradient(rgba(43,38,33,0.4), rgba(43,38,33,0.6)), url('img/Reserva.webp') center/cover;">
+                        <span class="h4 fw-bold text-white mb-0">Michoacán</span>
+                        <p class="small text-light">Experiencia de 3 días con guía local certificado</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <section class="row g-4">
-                
-                <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 shadow-sm border-0 p-3">
-                        <div class="card-body">
-                            <h3 class="h5 fw-bold text-success mb-3">🧭 Destinos Únicos</h3>
-                            <p class="card-text text-muted">Accede a catálogos detallados con las mejores rutas de senderismo, pueblos mágicos y reservas naturales de la región.</p>
+        <!-- ACTIVIDAD TURÍSTICA DEL MES -->
+        <section class="container my-5 py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-uppercase fw-bold small" style="color: #a84e26; letter-spacing: 1px;">No te lo puedes perder</span>
+                <h2 class="h2 fw-bold mt-1" style="color: #2b2621;">Actividad Turística del Mes</h2>
+                <p class="text-muted">La vivencia más cotizada y mágica seleccionada por nuestros viajeros.</p>
+            </div>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm overflow-hidden" style="background-color: #fcfbfa;">
+                        <div class="row g-0 align-items-center">
+                            <!-- Columna Izquierda: Texto justificado -->
+                            <div class="col-lg-6 p-4 p-md-5 text-start">
+                                <span class="badge px-3 py-2 mb-3" style="background-color: #2b2621; color: #fff;">Experiencia Destacada</span>
+                                <h3 class="h4 fw-bold mb-3" style="color: #2b2621;">Paseo Nocturno Iluminado en las Cascadas de los Prismas</h3>
+                                <p class="mb-4" style="color: #6b5c53; font-size: 0.95rem; line-height: 1.6; text-align: justify;">Disfruta de una iluminación artística única que resalta las formaciones geométricas basálticas bajo la luz de la luna, acompañado de leyendas locales y música acústica tradicional al aire libre.</p>
+                                <a href="experiencias.html" class="btn btn-terracota px-4 py-2">Ver Detalles de la Actividad</a>
+                            </div>
+                            <!-- Columna Derecha: Imagen de fondo con gradiente -->
+                            <div class="col-lg-6 text-white text-center p-5 d-flex flex-column justify-content-center align-items-center" style="min-height: 320px; background: linear-gradient(rgba(43,38,33,0.4), rgba(43,38,33,0.6)), url('img/Huasca-Portada.jpg') center/cover;">
+                                <span class="h4 fw-bold text-white mb-0">Huasca de Ocampo, Hidalgo</span>
+                                <p class="small text-light">Recorrido nocturno de 2 horas</p>
+                            </div>
                         </div>
                     </div>
-                </article>
+                </div>
+            </div>
+        </section>
 
-                <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 shadow-sm border-0 p-3">
-                        <div class="card-body">
-                            <h3 class="h5 fw-bold text-success mb-3">🗺️ Experiencias Guiadas</h3>
-                            <p class="card-text text-muted">Participa en talleres tradicionales, expediciones nocturnas y recorridos dirigidos por guías locales certificados.</p>
+        <section class="container-fluid py-5 my-4" style="background-color: rgba(168, 78, 38, 0.04);" data-aos="fade-up">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="h2 fw-bold" style="color: #2b2621;">Aventuras para Disfrutar en Familia</h2>
+                    <p class="text-muted">Espacios seguros, divertidos y llenos de aprendizaje para chicos y grandes.</p>
+                </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100 shadow-sm border-0 bg-white">
+                            <div class="card-body p-4 text-center">
+                                <h3 class="h5 fw-bold mb-3" style="color: #a84e26;">Talleres de Alfarería Tradicional</h3>
+                                <p class="mb-3" style="color: #6b5c53; font-size: 0.9rem;">Involucra a los más pequeños en el arte de moldear el barro con artesanos locales en pueblos mágicos.</p>
+                            </div>
                         </div>
                     </div>
-                </article>
-
-                <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 shadow-sm border-0 p-3">
-                        <div class="card-body">
-                            <h3 class="h5 fw-bold text-success mb-3">⚡ Planificador Interactivo</h3>
-                            <p class="card-text text-muted">Utiliza nuestro formulario inteligente con validación en tiempo real para organizar tu itinerario de viaje de forma rápida y sencilla.</p>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100 shadow-sm border-0 bg-white">
+                            <div class="card-body p-4 text-center">
+                                <h3 class="h5 fw-bold mb-3" style="color: #a84e26;">Rutas de Senderismo Ligeras</h3>
+                                <p class="mb-3" style="color: #6b5c53; font-size: 0.9rem;">Caminatas guiadas de baja intensidad ideales para carriolas, niños y adultos mayores disfrutando del aire puro.</p>
+                            </div>
                         </div>
                     </div>
-                </article>
-
-            </section>
-        </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card h-100 shadow-sm border-0 bg-white">
+                            <div class="card-body p-4 text-center">
+                                <h3 class="h5 fw-bold mb-3" style="color: #a84e26;">Picnics Panorámicos</h3>
+                                <p class="mb-3" style="color: #6b5c53; font-size: 0.9rem;">Espacios acondicionados con canastas de productos regionales en los miradores más seguros y hermosos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-4 mt-5 shadow-sm">
-    <div class="container">
-        <small>© 2026 RINCONES ESCONDIDOS - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
-    </div>
-</footer>
+        <div class="container">
+            <small>© 2026 RINCONES ESCONDIDOS - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>
+        </div>
+    </footer>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

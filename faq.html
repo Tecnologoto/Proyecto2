@@ -9,12 +9,13 @@
     <link href="style.css" rel="stylesheet">
 
 </head>
-<body class="bg-light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-    
+<body data-bs-theme="light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">        
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="index.html">RINCONES ESCONDIDOS</a>                
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
+                </a>
                 <div class="navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav flex-row">
                         <li class="nav-item me-3">
@@ -30,7 +31,7 @@
                             <a class="nav-link" href="planificador.html">Planificador</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faq.html">FAQ</a>
+                            <a class="nav-link active" aria-current="page" href="destinos.html">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -38,69 +39,72 @@
         </nav>
     </header>
 
-    <main class="container my-5">
+    <main class="container my-5" style="padding-top: 100px; max-width: 800px;">
         <section class="text-center mb-5" data-aos="fade-up">
-            <h1 class="display-4 fw-bold text-dark">Preguntas Frecuentes</h1>
-            <p class="lead text-muted">Encuentra respuestas a las dudas más comunes sobre nuestras rutas y experiencias turísticas.</p>
+            <h1 class="display-4 fw-bold mb-2" style="color: #2b2621;">Preguntas Frecuentes</h1>
+            <p class="lead text-muted">Resuelve tus dudas sobre cómo planear tu viaje y vivir la mejor experiencia.</p>
         </section>
 
-        <section class="row g-4">
+        <!-- ACORDEÓN DE PREGUNTAS -->
+        <div class="accordion shadow-sm" id="accordionFAQ" data-aos="fade-up">
             
-            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 shadow-sm border-0 p-3">
-                    <div class="card-body">
-                        <h3 class="h5 fw-bold text-success mb-3">¿Cómo puedo buscar destinos o rutas de senderismo?</h3>
-                        <p class="card-text text-muted">Puedes utilizar el menú de navegación principal para acceder a la sección de destinos, donde encontrarás un catálogo detallado y filtrado por regiones, categorías y niveles de dificultad.</p>
+            <!-- Pregunta 1 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Cómo funciona el planificador de rutas?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        Nuestro planificador te permite ingresar tus datos personales y seleccionar el destino de tu preferencia. Al enviar el formulario, el sistema valida la información para asegurar que todo esté correcto y te asigna una propuesta preliminar lista para tu viaje.
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 shadow-sm border-0 p-3">
-                    <div class="card-body">
-                        <h3 class="h5 fw-bold text-success mb-3">¿Las experiencias y excursiones locales incluyen guía certificado?</h3>
-                        <p class="card-text text-muted">Sí, todas las actividades y excursiones publicadas en la sección de experiencias están coordinadas con guías locales certificados para garantizar una vivencia segura, auténtica y de calidad para todos los visitantes.</p>
+            <!-- Pregunta 2 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Los recorridos incluyen guías locales certificados?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        Sí, todas nuestras experiencias están vinculadas con anfitriones y guías locales de cada comunidad para garantizar un turismo seguro, respetuoso y profundamente enriquecedor.
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 shadow-sm border-0 p-3">
-                    <div class="card-body">
-                        <h3 class="h5 fw-bold text-success mb-3">¿Es necesario registrarse o hacer una reserva previa para los tours?</h3>
-                        <p class="card-text text-muted">Para aquellas experiencias exclusivas o de cupos limitados, es necesario completar el formulario interactivo de reserva o registro disponible en la plataforma para asegurar tu lugar con anticipación.</p>
+            <!-- Pregunta 3 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Qué métodos de validación tiene el formulario?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        El formulario valida en tiempo real que tu nombre no esté vacío, que tu correo sea válido, que tu número telefónico tenga exactamente 10 dígitos y calcula automáticamente tu edad a partir de tu fecha de nacimiento.
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
-                <div class="card h-100 shadow-sm border-0 p-3">
-                    <div class="card-body">
-                        <h3 class="h5 fw-bold text-success mb-3">¿Cómo funciona el formulario de contacto o planificación de viajes?</h3>
-                        <p class="card-text text-muted">Nuestro formulario cuenta con validación dinámica en JavaScript que intercepta el envío mediante <ins class="text-decoration-none fw-bold text-dark">e.preventDefault()</ins>, evitando recargas de página innecesarias y mostrando mensajes de retroalimentación directa en el DOM.</p>
+            <!-- Pregunta 4 -->
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        ¿Puedo viajar con niños o adultos mayores?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        ¡Por supuesto! Contamos con secciones especiales de actividades familiares y rutas de senderismo ligeras adaptadas para que personas de todas las edades disfruten sin riesgos.
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="500">
-                <div class="card h-100 shadow-sm border-0 p-3">
-                    <div class="card-body">
-                        <h3 class="h5 fw-bold text-success mb-3">¿El sitio web se adapta a teléfonos móviles y tablets?</h3>
-                        <p class="card-text text-muted">Absolutamente. Todo el sitio está maquetado bajo el enfoque <strong>Mobile-First</strong> utilizando el sistema de rejilla de Bootstrap, lo que garantiza una visualización fluida y sin desbordamientos en cualquier dispositivo.</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="600">
-                <div class="card h-100 shadow-sm border-0 p-3">
-                    <div class="card-body">
-                        <h3 class="h5 fw-bold text-success mb-3">¿Dónde se puede consultar este proyecto en funcionamiento?</h3>
-                        <p class="card-text text-muted">El proyecto integrador completo se encuentra alojado, desplegado y accesible en vivo a través de <strong>GitHub Pages</strong>, cumpliendo con la condición resolutiva obligatoria y los controles de versión requeridos en la rúbrica[cite: 2, 5].</p>
-                    </div>
-                </div>
-            </article>
-
-        </section>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-4 mt-5">

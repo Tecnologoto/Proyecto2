@@ -6,29 +6,28 @@
     <title>Catálogo de Destinos - Rutas y Destinos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Ruta correcta a tu CSS -->
     <link href="style.css" rel="stylesheet">
 </head>
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     
-    <!-- ENCABEZADO Y NAVEGACIÓN UNIFICADA -->
     <header>
-        <nav class="navbar navbar-expand fixed-top">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">🧭 Rutas y Destinos</a>
+        <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
+                </a>
                 <div class="navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav flex-row">
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="destinos.html">Destinos</a>
-                        </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="destinos.html">Destinos</a>                        </li>
+                        <li class="nav-item me-3">
                             <a class="nav-link" href="experiencias.html">Experiencias</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Planificador</a>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="planificador.html">Planificador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="faq.html">FAQ</a>
@@ -39,14 +38,12 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main class="container my-5" style="padding-top: 80px;">
         <section class="text-center mb-5" data-aos="fade-up">
             <h1 class="display-4 fw-bold mb-2" style="color: #2b2621;">Destinos Turísticos</h1>
             <p class="lead text-muted">Explora los rincones más hermosos, desde majestuosas sierras hasta tranquilos pueblos mágicos.</p>
         </section>
 
-        <!-- SECCIÓN DE TARJETAS CON TUS 6 DESTINOS -->
         <section class="row g-4">
             
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
@@ -118,7 +115,6 @@
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <div class="container text-center">
             <small>© 2026 Rutas y Destinos - Proyecto Integrador de Turismo. Todos los derechos reservados.</small>

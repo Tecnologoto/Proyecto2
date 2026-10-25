@@ -1,0 +1,27 @@
+<svg width="270" height="60" viewBox="0 0 270 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Símbolo: Brújula / Llave Terracota -->
+  <g transform="translate(2, 2)">
+    <circle cx="28" cy="28" r="24" stroke="#a84e26" stroke-width="2.5" fill="#1e1915" />
+    
+    <path d="M28 2 L31 20 L28 26 L25 20 Z" fill="#a84e26" />
+    <path d="M28 54 L31 36 L28 30 L25 36 Z" fill="#a84e26" />
+    <path d="M2 28 L20 31 L26 28 L20 25 Z" fill="#a84e26" />
+    <path d="M54 28 L36 31 L30 28 L36 25 Z" fill="#a84e26" />
+    
+    <polygon points="28,28 13,13 18,18" fill="#a84e26" opacity="0.6" />
+    <polygon points="28,28 43,13 38,18" fill="#a84e26" opacity="0.6" />
+    <polygon points="28,28 13,43 18,38" fill="#a84e26" opacity="0.6" />
+    <polygon points="28,28 43,43 38,38" fill="#a84e26" opacity="0.6" />
+
+    <circle cx="28" cy="28" r="7.5" fill="#f7f4ef" />
+    <circle cx="28" cy="28" r="2.8" fill="#38d4f8" />
+    
+    <path d="M26.5 35 L26.5 48 H29.5 L29.5 35 Z" fill="#a84e26" />
+    <path d="M29.5 40 H33 V42.5 H29.5 Z" fill="#a84e26" />
+    <path d="M29.5 45 H32 V47 H29.5 Z" fill="#a84e26" />
+  </g>
+
+  <!-- Texto con tono oscuro (#2b2621) y contorno para fondo claro -->
+  <text x="66" y="24" font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, sans-serif" font-weight="800" font-size="14.5" fill="#2b2621" stroke="#ffffff" stroke-width="0.5" letter-spacing="0.8">RINCONES</text>
+  <text x="66" y="44" font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, sans-serif" font-weight="700" font-size="14.5" fill="#2b2621" stroke="#ffffff" stroke-width="0.5" letter-spacing="1.2">ESCONDIDOS</text>
+</svg>
