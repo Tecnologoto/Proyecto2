@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let formValido = true;
 
+            // Validaciones
             if (nombre === '') {
                 inputNombre.classList.add('is-invalid');
                 formValido = false;
@@ -86,8 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 alerta.classList.remove('d-none');
             } else {
                 alerta.className = "alert alert-success";
-                alerta.textContent = `¡Excelente, ${nombre}! Tu itinerario ha sido registrado con éxito. Nos pondremos en contacto contigo.`;
+                alerta.textContent = `¡Excelente, ${nombre}! Tu itinerario ha sido registrado con éxito.`;
                 alerta.classList.remove('d-none');
+                
+                alert("Nos pondremos en contacto con usted por los medios de comunicación proporcionados.");
                 
                 formulario.reset();
                 document.querySelectorAll('.form-control, .form-select').forEach(el => {
