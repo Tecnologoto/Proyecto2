@@ -9,8 +9,8 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="bg-light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    
     <header>
-        <!-- FIXED: navbar-expand-md, navbar-light, container -->
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -56,45 +56,72 @@
             </div>
         </section>
 
+        <!-- PRIMERA TARJETA (Absolute Position Trick) -->
         <section class="container my-5 py-3" data-aos="fade-up">
             <div class="card border-0 shadow-sm overflow-hidden" style="background-color: #fcfbfa;">
-                <div class="row g-0 align-items-center">
-                    <div class="col-12 col-lg-6 p-4 p-md-5">
-                        <span class="badge px-3 py-2 mb-3" style="background-color: #2b2621; color: #fff;">Ruta Destacada del Mes</span>
+                <div class="row g-0"> <!-- Removed align-items-stretch -->
+                    
+                    <!-- Texto (Izquierda) -->
+                    <div class="col-12 col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center">
+                        <span class="badge px-3 py-2 mb-3 align-self-start" style="background-color: #2b2621; color: #fff;">Ruta Destacada del Mes</span>
                         <h2 class="h2 fw-bold mb-3" style="color: #2b2621;">El Camino de la Monarca y Bosques de Oyamel</h2>
                         <p class="mb-4" style="color: #6b5c53; font-size: 1rem; line-height: 1.6;">Una travesía imperdible diseñada para conectar profundamente con el ritmo de la naturaleza. Recorre senderos brumosos, descubre miradores secretos y maravíllate con el santuario natural.</p>
-                        <a href="planificador.html" class="btn btn-terracota px-4 py-2 fw-bold">Reservar Ruta del Mes</a>
+                        <a href="planificador.html" class="btn btn-terracota px-4 py-2 fw-bold align-self-start">Reservar Ruta del Mes</a>
                     </div>
-                    <div class="col-12 col-lg-6 text-white text-center p-4 p-md-5 d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background: linear-gradient(rgba(43,38,33,0.4), rgba(43,38,33,0.6)), url('img/Reserva.webp') center/cover;">
-                        <span class="h4 fw-bold text-white mb-0">Michoacán</span>
-                        <p class="small text-light">Experiencia de 3 días con guía local certificado</p>
+                    
+                    <!-- Imagen (Derecha) - THE ABSOLUTE POSITION FIX -->
+                    <div class="col-12 col-lg-6 position-relative p-3" style="min-height: 300px;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 p-3">
+                            <div class="w-100 h-100 position-relative" style="border-radius: 10px; overflow: hidden; background: url('img/Reserva.webp') center/cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white text-center" style="background: linear-gradient(rgba(43,38,33,0.4), rgba(43,38,33,0.6));">
+                                    <span class="h4 fw-bold text-white mb-0">Michoacán</span>
+                                    <p class="small text-light mb-0">Experiencia de 3 días con guía local certificado</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- SEGUNDA TARJETA (Mismo tamaño que la primera) -->
         <section class="container my-5 py-4">
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="text-uppercase fw-bold small" style="color: #a84e26; letter-spacing: 1px;">No te lo puedes perder</span>
                 <h2 class="h2 fw-bold mt-1" style="color: #2b2621;">Actividad Turística del Mes</h2>
                 <p class="text-muted">La vivencia más cotizada y mágica seleccionada por nuestros viajeros.</p>
             </div>
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-12 col-lg-10">
-                    <div class="card border-0 shadow-sm overflow-hidden" style="background-color: #fcfbfa;">
-                        <div class="row g-0 align-items-center">
-                            <div class="col-12 col-lg-6 p-4 p-md-5 text-start">
-                                <span class="badge px-3 py-2 mb-3" style="background-color: #2b2621; color: #fff;">Experiencia Destacada</span>
-                                <h3 class="h4 fw-bold mb-3" style="color: #2b2621;">Paseo Nocturno Iluminado en las Cascadas de los Prismas</h3>
-                                <p class="mb-4" style="color: #6b5c53; font-size: 0.95rem; line-height: 1.6; text-align: justify;">Disfruta de una iluminación artística única que resalta las formaciones geométricas basálticas bajo la luz de la luna, acompañado de leyendas locales y música acústica tradicional al aire libre.</p>
-                                <a href="experiencias.html" class="btn btn-terracota px-4 py-2">Ver Detalles de la Actividad</a>
-                            </div>
-                            <div class="col-12 col-lg-6 text-white text-center p-4 p-md-5 d-flex flex-column justify-content-center align-items-center" style="min-height: 320px; background: linear-gradient(rgba(43,38,33,0.4), rgba(43,38,33,0.6)), url('img/Huasca-Portada.jpg') center/cover;">
-                                <span class="h4 fw-bold text-white mb-0">Huasca de Ocampo, Hidalgo</span>
-                                <p class="small text-light">Recorrido nocturno de 2 horas</p>
+            
+            <!-- Se eliminaron los divs "row" y "col-lg-10" para igualar el ancho -->
+            <div class="card border-0 shadow-sm overflow-hidden" style="background-color: #fcfbfa;" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-0"> 
+                    
+                    <!-- Texto (Izquierda) -->
+                    <div class="col-12 col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center">
+                        <span class="badge px-3 py-2 mb-3 align-self-start" style="background-color: #2b2621; color: #fff;">Experiencia Destacada</span>
+                        
+                        <!-- Se cambió de h3 class="h4" a h2 class="h2" -->
+                        <h2 class="h2 fw-bold mb-3" style="color: #2b2621;">Paseo Nocturno Iluminado en las Cascadas de los Prismas</h2>
+                        
+                        <!-- Se cambió de font-size: 0.95rem a 1rem -->
+                        <p class="mb-4" style="color: #6b5c53; font-size: 1rem; line-height: 1.6; text-align: justify;">Disfruta de una iluminación artística única que resalta las formaciones geométricas basálticas bajo la luz de la luna, acompañado de leyendas locales y música acústica tradicional al aire libre.</p>
+                        
+                        <a href="experiencias.html" class="btn btn-terracota px-4 py-2 align-self-start">Ver Detalles de la Actividad</a>
+                    </div>
+                    
+                    <!-- Imagen (Derecha) -->
+                    <div class="col-12 col-lg-6 position-relative p-3" style="min-height: 300px;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 p-3">
+                            <div class="w-100 h-100 position-relative" style="border-radius: 10px; overflow: hidden; background: url('img/Huasca-Portada.jpg') center/cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white text-center" style="background: linear-gradient(rgba(43,38,33,0.4), rgba(43,38,33,0.6));">
+                                    <span class="h4 fw-bold text-white mb-0">Huasca de Ocampo, Hidalgo</span>
+                                    <p class="small text-light mb-0">Recorrido nocturno de 2 horas</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -141,7 +168,6 @@
         </div>
     </footer>
 
-    <!-- FIXED: Bootstrap 5.3.3 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
