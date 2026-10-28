@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planificador - Rutas y Destinos</title>
+    <title>Formulario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
@@ -11,14 +11,18 @@
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     
     <header>
+        <!--Esta clase de nav me permite que el menú se expanda en pantallas medianas y grandes, y se convierta en botón hamburguesa-->
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
+                <!--Aquí integramos un redireccionamiento al index desde el logotipo. Integramos funciones propias de boostrap para identificar el logo y hacer flexbox que fuerza la alineación de elementos-->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
                 </a>
+                <!--Este es el menú hamburguesa. Aquí hay script simplificado de boostrap que permite desplegar y ocultar el menú automáticamente. También tiene elementos de accesibilidad. El span es el ícono-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--Es lo que permite desplegar el menu hacia abajo al interactuar-->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav gap-4">
                         <li class="nav-item">
@@ -42,43 +46,44 @@
         </nav>
     </header>
 
-    <main class="container my-5" style="padding-top: 80px; max-width: 750px;">
+    <!--containter es una clase de boostrap que da márgenes laterales automáticos tipo my-5, empujamos hacia abajo con padding-top y limitamos los párrafos a 800px-->
+    <main class="container my-5" style="padding-top: 100px; max-width: 800px;">
         <section class="text-center mb-4" data-aos="fade-up">
-            <h1 class="display-5 fw-bold mb-2" style="color: #2b2621;">Planificador de Viajes</h1>
+            <h1 class="display-5 fw-bold mb-2" style="color: #2b2621;">Planea tu viaje</h1>
             <p class="text-muted">Personaliza tu próxima aventura o reserva tu experiencia turística con nosotros.</p>
         </section>
 
         <div class="row justify-content-center">
+            <!--Aquí hacemos que las tarjetas ocupen el ancho de la pantalla, para dinamismo.-->
             <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <!--Crea contenedor con sombra y es adaptativo-->
                 <div class="card shadow-sm border-0 p-4 p-md-5 bg-white">
                     <div class="card-body p-0">
-                        
+                        <!--Recibe los mensajes de éxito o error-->
                         <div id="mensajeAlerta" class="alert d-none mb-4" role="alert"></div>
 
-                                                <form id="formPlanificador" novalidate>
+                        <!--Generamos nuestro selector del formulario para el script y desactivamos la validación nativa del navegador para darle control al script-->
+                        <form id="formPlanificador" novalidate>
                             
-                            <!-- NOMBRE (Destacado) -->
                             <div class="mb-3">
                                 <label for="nombreUsuario" class="form-label fw-bold small texto-destacado">Nombre Completo</label>
-                                <input type="text" class="form-control texto-destacado" id="nombreUsuario" placeholder="Ej. Ana Pérez" required>
+                                <!--Generamos id, damos estilo de entrada y texto de muestra automático-->
+                                <input type="text" class="form-control texto-destacado" id="nombreUsuario" placeholder="Ej. Alma María Ruiz de toda la Concepción Ramirez" required>
                                 <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
                             </div>
 
-                            <!-- CORREO (Destacado) -->
                             <div class="mb-3">
                                 <label for="emailUsuario" class="form-label fw-bold small texto-destacado">Correo Electrónico</label>
                                 <input type="email" class="form-control texto-destacado" id="emailUsuario" placeholder="correo@ejemplo.com" required>
                                 <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
                             </div>
 
-                            <!-- TELÉFONO (Destacado) -->
                             <div class="mb-3">
                                 <label for="telefonoUsuario" class="form-label fw-bold small texto-destacado">Teléfono</label>
                                 <input type="tel" class="form-control texto-destacado" id="telefonoUsuario" placeholder="Ej. 5512345678" required>
                                 <div class="invalid-feedback">Ingresa un número de teléfono válido (10 dígitos).</div>
                             </div>
 
-                            <!-- FECHA Y EDAD (Gris claro) -->
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3 mb-md-0">
                                     <label for="fechaNacimiento" class="form-label fw-bold small">Fecha de Nacimiento</label>
@@ -92,28 +97,26 @@
                                 </div>
                             </div>
 
-                            <!-- DESTINO (Gris claro) -->
                             <div class="mb-3">
                                 <label for="destinoSelect" class="form-label fw-bold small">Destino de Interés</label>
                                 <select class="form-select" id="destinoSelect" required>
                                     <option value="" selected disabled>Selecciona una región o destino...</option>
                                     <option value="barrancas">Barrancas del Cobre - Chihuahua</option>
                                     <option value="tepoztlan">Tepoztlán - Morelos</option>
-                                    <option value="prismas">Prismas Basálticos - Hidalgo</option>
-                                    <option value="callejon">Callejón del Beso - Guanajuato</option>
-                                    <option value="mariposa">Reserva Mariposa Monarca - Michoacán</option>
-                                    <option value="canion">Cañón del Sumidero - Chiapas</option>
+                                    <option value="prismas">Prismas basálticos - Hidalgo</option>
+                                    <option value="callejon">Callejón del beso - Guanajuato</option>
+                                    <option value="mariposa">Reserva mariposa monarca - Michoacán</option>
+                                    <option value="canion">Cañón del sumidero - Chiapas</option>
                                 </select>
                                 <div class="invalid-feedback">Por favor selecciona un destino de interés.</div>
                             </div>
 
-                            <!-- COMENTARIOS (Gris claro) -->
                             <div class="mb-4">
                                 <label for="detallesTextarea" class="form-label fw-bold small">Requerimientos o Comentarios Adicionales</label>
                                 <textarea class="form-control" id="detallesTextarea" rows="4" placeholder="Indícanos si requieres guía certificado, transporte o necesidades especiales..."></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-terracota w-100 py-3 fw-bold">Enviar Planificador</button>
+                            <button type="submit" class="btn btn-terracota w-100 py-3 fw-bold">Enviar</button>
 
                         </form>
 
@@ -124,8 +127,8 @@
 
         <section class="container my-5" data-aos="fade-up">
             <div class="text-center mb-4">
-                <h2 class="h3 fw-bold mt-1" style="color: #2b2621;">Explora la Zona en el Mapa</h2>
-                <p class="text-muted">Ven a registrar personalmente tu viaje o atender tuds dudas y problemas</p>
+                <h2 class="h3 fw-bold mt-1" style="color: #2b2621;">Explora la zona en el mapa</h2>
+                <p class="text-muted">Ven a registrar personalmente tu viaje o atender tus dudas y problemas</p>
             </div>
             
             <div class="card border-0 shadow-sm overflow-hidden" style="border-radius: 14px;">

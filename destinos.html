@@ -11,14 +11,18 @@
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     
     <header>
+        <!--Esta clase de nav me permite que el menú se expanda en pantallas medianas y grandes, y se convierta en botón hamburguesa-->
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
+                <!--Aquí integramos un redireccionamiento al index desde el logotipo. Integramos funciones propias de boostrap para identificar el logo y hacer flexbox que fuerza la alineación de elementos-->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
                 </a>
+                <!--Este es el menú hamburguesa. Aquí hay script simplificado de boostrap que permite desplegar y ocultar el menú automáticamente. También tiene elementos de accesibilidad. El span es el ícono-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--Es lo que permite desplegar el menu hacia abajo al interactuar-->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav gap-4">
                         <li class="nav-item">
@@ -42,20 +46,27 @@
         </nav>
     </header>
 
-    <main class="container my-5" style="padding-top: 80px;">
+    <!--containter es una clase de boostrap que da márgenes laterales automáticos tipo my-5, empujamos hacia abajo con padding-top. Evitamos la limitación de párrafos-->
+    <main class="container my-5" style="padding-top: 100px;">
         <section class="text-center mb-5" data-aos="fade-up">
             <h1 class="display-4 fw-bold mb-2" style="color: #2b2621;">Destinos Turísticos</h1>
             <p class="lead text-muted">Explora los rincones más hermosos, desde majestuosas sierras hasta tranquilos pueblos mágicos.</p>
         </section>
 
+        <!--plicr espacio uniforme en la fila contenedora-->
         <section class="row g-4">
             
+            <!--Damos adaptabilidad al contenido y animación-->
             <article class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+                <!--Todas las tarjetas llevan la misma altura-->
                 <div class="card h-100">
+                    <!--Hacemos que las imagenes ocupen todo su espacio sin importar la extensión del texto-->
                     <img src="img/Senderismo.webp" class="card-img-top" alt="Ruta de senderismo Barrancas del Cobre">
+                    <!--Cuerpo de la tarjeta-->
                     <div class="card-body p-4">
                         <h3 class="h5 fw-bold mb-3">Barrancas del Cobre - Chihuahua</h3>
                         <p class="card-text text-muted mb-4">Las Barrancas del Cobre son el sistema de cañones más extenso y profundo que el Gran Cañón de EE. UU., ideal para el turismo de aventura, caminatas memorables y recorridos panorámicos en el tren Chepe.</p>
+                        <!--botón-->
                         <a href="https://www.youtube.com/watch?v=ln3lN9W4T5M" target="_blank" class="btn btn-terracota btn-sm">Conoce más</a>
                     </div>
                 </div>

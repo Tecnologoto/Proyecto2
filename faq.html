@@ -8,16 +8,20 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
-<body data-bs-theme="light" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">        
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">        
     <header>
+        <!--Esta clase de nav me permite que el menú se expanda en pantallas medianas y grandes, y se convierta en botón hamburguesa-->
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
+                <!--Aquí integramos un redireccionamiento al index desde el logotipo. Integramos funciones propias de boostrap para identificar el logo y hacer flexbox que fuerza la alineación de elementos-->
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <img src="img/RinconesEscondidos2.svg" alt="Rincones Escondidos" height="60">
                 </a>
+                <!--Este es el menú hamburguesa. Aquí hay script simplificado de boostrap que permite desplegar y ocultar el menú automáticamente. También tiene elementos de accesibilidad. El span es el ícono-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--Es lo que permite desplegar el menu hacia abajo al interactuar-->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavMenu">
                     <ul class="navbar-nav gap-4">
                         <li class="nav-item">
@@ -41,16 +45,15 @@
         </nav>
     </header>
 
+    <!--containter es una clase de boostrap que da márgenes laterales automáticos tipo my-5, empujamos hacia abajo con padding-top y limitamos los párrafos a 800px-->
     <main class="container my-5" style="padding-top: 100px; max-width: 800px;">
         <section class="text-center mb-5" data-aos="fade-up">
             <h1 class="display-4 fw-bold mb-2" style="color: #2b2621;">Preguntas Frecuentes</h1>
             <p class="lead text-muted">Resuelve tus dudas sobre cómo planear tu viaje y vivir la mejor experiencia.</p>
         </section>
 
-        <!-- ACORDEÓN DE PREGUNTAS -->
         <div class="accordion shadow-sm" id="accordionFAQ" data-aos="fade-up">
             
-            <!-- Pregunta 1 -->
             <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -64,7 +67,6 @@
                 </div>
             </div>
 
-            <!-- Pregunta 2 -->
             <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -78,7 +80,6 @@
                 </div>
             </div>
 
-            <!-- Pregunta 3 -->
             <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -92,7 +93,6 @@
                 </div>
             </div>
 
-            <!-- Pregunta 4 -->
             <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
